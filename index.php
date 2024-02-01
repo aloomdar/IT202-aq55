@@ -4,6 +4,11 @@
         <script>
             console.log("test output")
         </script>
+        <style>
+            h1{
+                color: blue;
+            }
+        </style>
     </head>
     <body>
         
