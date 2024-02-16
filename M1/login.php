@@ -33,7 +33,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         $hasError = true;
     }
     //sanitize
-    $email = sanitize_email($email);
+    $email = sanitize_email($email); //checks for sql commands in the field and gets rid of it
     //validate
     if (!is_valid_email($email)) {
         echo "Invalid email address";

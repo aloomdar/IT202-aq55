@@ -69,7 +69,7 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
     if (!$hasError) {
         echo "Welcome, $email";
         //TODO 4
-        $hash = password_hash($password, PASSWORD_BCRYPT);
+        $hash = password_hash($password, PASSWORD_BCRYPT); //scrambles/hashes the password to make it harder for information to be accessed by hackers
         $db = getDB();
         $stmt = $db->prepare("INSERT INTO Users (email, password) VALUES(:email, :password)");
         try {
