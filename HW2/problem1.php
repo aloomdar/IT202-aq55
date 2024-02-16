@@ -11,6 +11,7 @@ function processArray($arr) {
     foreach($arr as $item){
         if($item%2!=0){
             echo $item;
+        }
     }
 }
 echo "Problem 1: Odd Output<br>";
