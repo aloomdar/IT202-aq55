@@ -5,6 +5,10 @@ require(__DIR__ . "/partials/nav.php");
     <div>
         <label for="email">Email</label>
         <input type="email" name="email" required />
+    </div> 
+    <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" required /> 
     </div>
     <div>
         <label for="pw">Password</label>
@@ -28,6 +32,7 @@ require(__DIR__ . "/partials/nav.php");
 //TODO 2: add PHP Code
 if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
     $email = se($_POST, "email", "", false);
+    $username = se($_POST, "username", "", false); //we know _POST value exists so we are storing it in username
     $password = se($_POST, "password", "", false);
     $confirm = se(
         $_POST,
@@ -71,9 +76,9 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         //TODO 4
         $hash = password_hash($password, PASSWORD_BCRYPT); //scrambles/hashes the password to make it harder for information to be accessed by hackers
         $db = getDB();
-        $stmt = $db->prepare("INSERT INTO Users (email, password) VALUES(:email, :password)");
+        $stmt = $db->prepare("INSERT INTO Users (email, password, username) VALUES(:email, :password, :username)");
         try {
-            $stmt->execute([":email" => $email, ":password" => $hash]);
+            $stmt->execute([":email" => $email, ":password" => $hash, "username" => $username]);
             echo "Successfully registered!";
         } catch (Exception $e) {
             echo "There was a problem registering";
