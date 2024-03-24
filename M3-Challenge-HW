@@ -22,26 +22,29 @@
     </script>
     <style>
         /* TODO: make edits here */
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav li{
-            list-style: none;
-        }
-        nav{
-            background-color: lightblue;
-        }
-        nav a:hover{
-            color: red;
-        }
 
         ul{
             list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: darkblue;
         }
-
-        h1, nav a{
-            text-transform: capitalize;
+        li{
+            float: left;
+        }
+        li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover{
+            background-color: green;
+        }
+        ul li::before{
+            content: '✓';
         }
     </style>
     <!-- make the necessary edits above this line -->
