@@ -7,26 +7,26 @@
     </script>
     <style>
         h1 {
-            color: blue;
+            color: black;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>hello world</h1>
+    <h1>My Website</h1>
 
-    <a href="https://xbox.com">my favorite website</a>
+    <!-- <a href="https://xbox.com">my favorite website</a> -->
 
-    <?php
+    <!-- <?php
     $secret = "password123";
     echo 10 + 13;
     if (TRUE) {
         echo "true";
     }
-    ?>
+    ?> -->
 
-    <p>additional page</p>
+    <!-- <p>additional page</p> -->
 
     <?php
 
