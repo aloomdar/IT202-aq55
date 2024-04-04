@@ -14,8 +14,14 @@
             setTimeout(() => {
                 //added this delay here as some solutions may require it to update properly (i.e., click code may complete before the navigation changes)
                 //TODO: add code for processing the current selection 
-                let currentSelection = window.location.hash.substring(1);
-                updateCurrentPage(currentSelection);
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.addEventListener('click', function(event){
+                        event.preventDefault();
+                        document.querySelector('h1').textContent = this.textContent;
+                        document.title = this.textContent;
+                        updateCurrentPage(this.textContent);
+                    });
+                });
                 //Note: likely you'll want to call updateCurrentPage towards the end
             }, 100);
         }
@@ -37,7 +43,7 @@
         }
 
         ul{
-            list-style-type: none;
+            list-style-type: '✓';
         }
 
         h1, nav a{
