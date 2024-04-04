@@ -47,7 +47,7 @@
         }
 
         h1, nav a{
-            text-transform: capitalize;
+            text-transform: capitalize; 
         }
     </style>
     <!-- make the necessary edits above this line -->
