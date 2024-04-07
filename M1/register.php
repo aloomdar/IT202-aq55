@@ -30,7 +30,7 @@ require(__DIR__ . "/partials/nav.php");
 </script>
 <?php
 //TODO 2: add PHP Code
-if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
+if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"]) && isset($_POST["username"])) {
     $email = se($_POST, "email", "", false);
     $username = se($_POST, "username", "", false); //we know _POST value exists so we are storing it in username
     $password = se($_POST, "password", "", false);
@@ -71,6 +71,17 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         echo "Passwords must match";
         $hasError = true;
     }
+
+    $db = getDB();
+    $stmt = $db->prepare("SELECT COUNT(*) FROM Users WHERE username = :username");
+    $stmt->execute([":username" => $username]);
+    $count = $stmt->fetchColumn();
+
+    if ($count > 0){
+        echo "Username already taken";
+        $hasError = true;
+    }
+
     if (!$hasError) {
         echo "Welcome, $email";
         //TODO 4
