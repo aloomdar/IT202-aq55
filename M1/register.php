@@ -75,6 +75,7 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
     $stmt->execute([":username" => $username]);
     $count = $stmt->fetchColumn();
 
+
     if ($count > 0) {
         echo "Username already taken";
         $hasError = true;

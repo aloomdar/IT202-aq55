@@ -4,7 +4,7 @@ require(__DIR__ . "/partials/nav.php");
 <form onsubmit="return validate(this)" method="POST">
     <div>
         <label for="email">Email</label>
-        <input type="email" name="email" required />
+        <input type="text" name="email" required />
     </div>
     <div>
         <label for="pw">Password</label>
@@ -35,10 +35,10 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     //sanitize
     $email = sanitize_email($email); //checks for sql commands in the field and gets rid of it
     //validate
-    if (!is_valid_email($email)) {
-        echo "Invalid email address";
-        $hasError = true;
-    }
+    // if (!is_valid_email($email)) {
+    //     echo "Invalid email address";
+    //     $hasError = true;
+    // }
     if (empty($password)) {
         echo "password must not be empty";
         $hasError = true;
@@ -50,7 +50,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     if (!$hasError) {
         //TODO 4
         $db = getDB();
-        $stmt = $db->prepare("SELECT id, email, password, username from Users where email = :email");
+        $stmt = $db->prepare("SELECT id, email, password, username from Users where email = :email OR username = :email");
         try {
             $r = $stmt->execute([":email" => $email]);
             if ($r) {
@@ -79,7 +79,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         }
                         die(header("Location: home.php"));
                     } else {
-                        echo "Invalid password";
+                        echo "Invalid password. Password does not match.\n";
                     }
                 } else {
                     echo "Email not found";
