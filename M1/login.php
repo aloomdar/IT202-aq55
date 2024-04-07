@@ -79,7 +79,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         }
                         die(header("Location: home.php"));
                     } else {
-                        echo "Invalid password";
+                        echo "Invalid password. Password does not match.\n";
                     }
                 } else {
                     echo "Email not found";
