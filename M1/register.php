@@ -65,9 +65,7 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         echo "Password too short";
         $hasError = true;
     }
-    if (
-        strlen($password) > 0 && $password !== $confirm
-    ) {
+    if (strlen($password) > 0 && $password !== $confirm) {
         echo "Passwords must match";
         $hasError = true;
     }
@@ -77,11 +75,12 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
     $stmt->execute([":username" => $username]);
     $count = $stmt->fetchColumn();
 
-    if ($count > 0){
+
+    if ($count > 0) {
         echo "Username already taken";
         $hasError = true;
     }
-
+    
     if (!$hasError) {
         echo "Welcome, $email";
         //TODO 4
