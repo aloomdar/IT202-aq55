@@ -1,6 +1,6 @@
 <table><tr><td> <em>Assignment: </em> IT202 Milestone1 Deliverable</td></tr>
 <tr><td> <em>Student: </em> Alamdar Qanoongo (aq55)</td></tr>
-<tr><td> <em>Generated: </em> 4/7/2024 2:20:22 PM</td></tr>
+<tr><td> <em>Generated: </em> 4/11/2024 7:56:16 PM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-104-S2024/it202-milestone1-deliverable/grade/aq55" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <ol><li>Checkout Milestone1 branch</li><li>Create a milestone1.md file in your Project folder</li><li>Git add/commit/push this empty file to Milestone1 (you'll need the link later)</li><li>Fill in the deliverable items<ol><li>For each feature, add a direct link (or links) to the expected file the implements the feature from Heroku Prod (I.e,&nbsp;<a href="https://mt85-prod.herokuapp.com/Project/register.php">https://mt85-prod.herokuapp.com/Project/register.php</a>)</li></ol></li><li>Ensure your images display correctly in the sample markdown at the bottom</li><ol><li>NOTE: You may want to try to capture as much checklist evidence in your screenshots as possible, you do not need individual screenshots and are recommended to combine things when possible. Also, some screenshots may be reused if applicable.</li></ol><li>Save the submission items</li><li>Copy/paste the markdown from the "Copy markdown to clipboard link" or via the download button</li><li>Paste the code into the milestone1.md file or overwrite the file</li><li>Git add/commit/push the md file to Milestone1</li><li>Double check the images load when viewing the markdown file (points will be lost for invalid/non-loading images)</li><li>Make a pull request from Milestone1 to dev and merge it (resolve any conflicts)<ol><li>Make sure everything looks ok on heroku dev</li></ol></li><li>Make a pull request from dev to prod (resolve any conflicts)<ol><li>Make sure everything looks ok on heroku prod</li></ol></li><li>Submit the direct link from github prod branch to the milestone1.md file (no other links will be accepted and will result in 0)</li></ol></td></tr></table>
 <table><tr><td> <em>Deliverable 1: </em> Feature: User will be able to register a new account </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707773-e6aef7cb-d5b2-4053-bbb1-b09fc609041e.png"></td></tr>
@@ -126,7 +126,7 @@
 <tr><td> <em>Sub-Task 4: </em> Explain briefly how the process/code works (edit only)</td></tr>
 <tr><td> <em>Response:</em> <p>(missing)</p><br></td></tr>
 </table></td></tr>
-<table><tr><td> <em>Deliverable 9: </em> Issues and Project Board </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707795-a9c94a71-7871-4572-bfae-ad636f8f8474.png"></td></tr>
+<table><tr><td> <em>Deliverable 9: </em> Issues and Project Board </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707834-bf5a5b13-ec36-4597-9741-aa830c195be2.png"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshots showing which issues are done/closed (project board) Incomplete Issues should not be closed</td></tr>
 <tr><td><table><tr><td>Missing Image</td></tr>
 <tr><td> <em>Caption:</em> (missing)</td></tr>
@@ -134,6 +134,6 @@
 <tr><td> <em>Sub-Task 2: </em> Include a direct link to your Project Board</td></tr>
 <tr><td>Not provided</td></tr>
 <tr><td> <em>Sub-Task 3: </em> Prod Application Link to Login Page</td></tr>
-<tr><td>Not provided</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="http://class.uvgrade.com/aq55/M1/login.php">http://class.uvgrade.com/aq55/M1/login.php</a> </td></tr>
 </table></td></tr>
 <table><tr><td><em>Grading Link: </em><a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IT202-104-S2024/it202-milestone1-deliverable/grade/aq55" target="_blank">Grading</a></td></tr></table>
