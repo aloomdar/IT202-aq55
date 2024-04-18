@@ -5,10 +5,10 @@ require(__DIR__ . "/partials/nav.php");
     <div>
         <label for="email">Email</label>
         <input type="email" name="email" required />
-    </div> 
+    </div>
     <div>
         <label for="username">Username</label>
-        <input type="text" name="username" required /> 
+        <input type="text" name="username" required />
     </div>
     <div>
         <label for="pw">Password</label>
@@ -80,7 +80,7 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         echo "Username already taken";
         $hasError = true;
     }
-    
+
     if (!$hasError) {
         echo "Welcome, $email";
         //TODO 4
