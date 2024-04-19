@@ -14,7 +14,7 @@ require (__DIR__ . "/partials/nav.php");
 <body>
     <div class="main">
         <table>
-            <h1>Daily Scores</h1>
+            <h2>Daily Scores</h2>
             <tr>
                 <td>Player</td>
                 <td>Score</td>
@@ -27,7 +27,7 @@ require (__DIR__ . "/partials/nav.php");
             </tr>
         </table>
         <table>
-            <h1>Weekly Scores</h1>
+            <h2>Weekly Scores</h2>
             <tr>
                 <td>Player</td>
                 <td>Score</td>
@@ -36,6 +36,19 @@ require (__DIR__ . "/partials/nav.php");
             <tr>
                 <?php
                 weekly();
+                ?>
+            </tr>
+        </table>
+        <table>
+            <h2>Monthly Scores</h2>
+            <tr>
+                <td>Player</td>
+                <td>Score</td>
+                <td>Date</td>
+            </tr>
+            <tr>
+                <?php
+                monthly();
                 ?>
             </tr>
         </table>
