@@ -4,6 +4,7 @@ require (__DIR__ . "/partials/nav.php");
 ?>
 
 <?php echo "It works!";?>
+<button onclick = "location.href = 'game.php';" id="myButton" class="float-left submit-button">Click here to play the game!</button>
 <!DOCTYPE html>
 <html lang="en">
 <head>
