@@ -24,7 +24,7 @@ function daily(){
 
 function weekly(){
     $db = getDB();
-    $stmt = $db->prepare("SELECT score, user_id, modified FROM Scores WHERE modified >= CURDATE() - INTERVAL DAYOFWEEK(curdate())+6 DAY AND modified < CURDATE() - INTERVAL DAYOFWEEK(CURDATE())-1 DAY LIMIT 10");
+    $stmt = $db->prepare("SELECT score, user_id, modified FROM Scores WHERE modified >= CURRENT_DATE - INTERVAL 7 DAY LIMIT 10");
     try{
         $r = $stmt->execute();
         if($r){
@@ -48,6 +48,7 @@ function weekly(){
 
 */
 function monthly(){
+
     $db = getDB();
     $stmt = $db->prepare("SELECT score, user_id, modified FROM Scores WHERE MONTH(modified) = MONTH(CURDATE()) LIMIT 10");
     try{
