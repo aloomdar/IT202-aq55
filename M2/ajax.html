@@ -3,6 +3,7 @@
 <button onclick="getRequest()">GET</button>
 <button onclick="postRequest()">POST</button>
 <button onclick="fetchRequest()">POST with Fetch</button>
+<button onclick="sendScore()">Send Score</button>
 
 <script>
     function getRequest() {
@@ -54,5 +55,22 @@
         }).catch(err => {
             alert("Error: " + err);
         })
+    }
+    function sendScore() {
+        let score = document.getElementsByTagName("input")[0].value;
+
+        fetch("insert_score.php", { // Assuming the PHP script name is insert_score.php
+            method: "POST",
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded",
+                "X-Requested-With": "XMLHttpRequest",
+            },
+            body: `score=${score}`
+        }).then(async resp => {
+            let responseText = await resp.text();
+            console.log(responseText); // Log the response
+        }).catch(err => {
+            console.error("Error: " + err);
+        });
     }
 </script>
